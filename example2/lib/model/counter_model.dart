@@ -5,7 +5,7 @@ extension OptionalInfixAddition<T extends num> on T? {
   T? operator +(T? other) {
     final shadow = this;
     if (shadow != null) {
-      shadow + (other ?? 0) as T;
+      return shadow + (other ?? 0) as T;
     } else {
       return null;
     }
@@ -16,7 +16,7 @@ extension OptionalInfixSubtraction<T extends num> on T? {
   T? operator -(T? other) {
     final shadow = this;
     if (shadow != null) {
-      shadow - (other ?? 0) as T;
+      return shadow - (other ?? 0) as T;
     } else {
       return null;
     }
