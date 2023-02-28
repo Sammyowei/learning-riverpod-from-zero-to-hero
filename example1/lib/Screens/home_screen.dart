@@ -1,3 +1,4 @@
+import 'package:example1/provider/date_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -11,9 +12,19 @@ class HomePage extends ConsumerStatefulWidget {
 class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final date = ref.watch(currentDate);
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Hooks Riverpod Example 1'),
+      ),
       body: Center(
-        child: Text('Hello World'),
+        child: Text(
+          date.toIso8601String(),
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
