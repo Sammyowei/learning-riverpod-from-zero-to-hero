@@ -14,7 +14,7 @@ class _HomePageState extends ConsumerState<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Hooks Riverpod Example 2'),
+        title: const Text('Example2 (Counter app)'),
       ),
       body: const Center(
         child: Text(
