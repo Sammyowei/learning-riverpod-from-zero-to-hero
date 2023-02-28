@@ -19,7 +19,7 @@ class _HomePageState extends ConsumerState<HomePage> {
       body: const Center(
         child: Text(
           'Hello World',
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
