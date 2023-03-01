@@ -17,6 +17,9 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Example3 (Weather app)',
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
