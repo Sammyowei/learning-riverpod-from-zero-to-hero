@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 extension OptionalInfixAddition<T extends num> on T? {
@@ -21,4 +20,14 @@ extension OptionalInfixSubtraction<T extends num> on T? {
       return null;
     }
   }
+}
+
+class Counter extends StateNotifier<int?> {
+  Counter() : super(null);
+
+  void increment() =>
+      state = state == null ? 1 : state + 1; // state = state + 1;
+
+  void decrement() =>
+      state = state == null ? 0 : state - 1; // state = state - 1;
 }
