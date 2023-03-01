@@ -2,6 +2,7 @@ import 'package:example3/models/city_model.dart';
 import 'package:example3/providers/city_provider.dart';
 import 'package:example3/providers/weather_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -27,7 +28,10 @@ class _HomePageState extends ConsumerState<HomePage> {
               weather,
               style: const TextStyle(fontSize: 100),
             ),
-            loading: () => const CircularProgressIndicator(),
+            loading: () => const SpinKitWave(
+              color: Colors.green,
+              duration: Duration(milliseconds: 1000),
+            ),
             error: (error, stack) => Text(error.toString()),
           ),
           Expanded(
