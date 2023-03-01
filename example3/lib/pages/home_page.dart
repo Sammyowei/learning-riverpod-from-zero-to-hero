@@ -30,7 +30,7 @@ class _HomePageState extends ConsumerState<HomePage> {
             ),
             loading: () => const SpinKitWave(
               color: Colors.green,
-              duration: Duration(milliseconds: 1000),
+              duration: Duration(milliseconds: 100),
             ),
             error: (error, stack) => Text(error.toString()),
           ),
